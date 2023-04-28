@@ -10,7 +10,9 @@ import (
 	"google.golang.org/grpc"
 )
 
-type server struct{}
+type server struct {
+	SpeedTest.UnimplementedSpeedTestServer
+}
 
 func (s *server) Upload(stream SpeedTest.SpeedTest_UploadServer) error {
 	var totalBytes int64
